@@ -38,10 +38,11 @@ public class Game {
 		boolean jump = key[KeyEvent.VK_SPACE];
 		boolean crouch = key[KeyEvent.VK_CONTROL];
 		boolean sprint = key[KeyEvent.VK_SHIFT];
+		boolean superSprint = key[KeyEvent.VK_C];
 		boolean turnLeft2 = key[KeyEvent.VK_LEFT];
 		boolean turnRight2 = key[KeyEvent.VK_RIGHT];
 		boolean escape = key[KeyEvent.VK_ESCAPE];
 		
-		controls.tick(forward, back, left, right, jump, crouch, sprint, turnLeft2, turnRight2, escape);
+		controls.tick(forward, back, left, right, jump, crouch, sprint, turnLeft2, turnRight2, escape, superSprint);
 	}
 }

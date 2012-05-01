@@ -74,46 +74,6 @@ public class Display extends Canvas implements Runnable {
 		addMouseListener(input);
 		addMouseMotionListener(input);
 	}
-	
-	public static Launcher getLauncherInstance() {
-		if(launcher == null) {
-			launcher = new Launcher();
-		}
-		return launcher;
-	}
-
-	public static void setGameWidthAndHeight() {
-		resSelection = Config.loadConfig("res/settings/config.xml", "resSelection");
-		if (resSelection == 0) {
-			width = 640;
-			height = 480;
-		}
-		if (resSelection == 1 || resSelection == -1) {
-			width = 800;
-			height = 600;
-		}
-		if (resSelection == 2) {
-			width = 1024;
-			height = 768;
-		}
-		if (resSelection == 3) {
-			width = 854;
-			height = 480;
-		}
-		if (resSelection == 4) {
-			width = 960;
-			height = 540;
-		}
-		if (resSelection == 5) {
-			width = 1024;
-			height = 576;
-		}
-		if (resSelection == 6) {
-			width = 1366;
-			height = 768;
-
-		}
-	}
 
 	// start thread
 	public synchronized void start() {
@@ -218,6 +178,48 @@ public class Display extends Canvas implements Runnable {
 		g.dispose();
 		bs.show();
 	}
+	
+	
+	public static Launcher getLauncherInstance() {
+		if(launcher == null) {
+			launcher = new Launcher();
+		}
+		return launcher;
+	}
+
+	public static void setGameWidthAndHeight() {
+		resSelection = Config.loadConfig("res/settings/config.xml", "resSelection");
+		if (resSelection == 0) {
+			width = 640;
+			height = 480;
+		}
+		if (resSelection == 1 || resSelection == -1) {
+			width = 800;
+			height = 600;
+		}
+		if (resSelection == 2) {
+			width = 1024;
+			height = 768;
+		}
+		if (resSelection == 3) {
+			width = 854;
+			height = 480;
+		}
+		if (resSelection == 4) {
+			width = 960;
+			height = 540;
+		}
+		if (resSelection == 5) {
+			width = 1024;
+			height = 576;
+		}
+		if (resSelection == 6) {
+			width = 1366;
+			height = 768;
+
+		}
+	}
+
 
 	// main method
 	public static void main(String[] args) {

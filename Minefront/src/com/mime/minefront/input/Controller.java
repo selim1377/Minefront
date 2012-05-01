@@ -13,7 +13,7 @@ public class Controller {
 	public static boolean sprinting = false;
 
 	public void tick(boolean forward, boolean back, boolean left, boolean right, boolean jump, boolean crouch,
-			boolean sprint, boolean turnLeft2, boolean turnRight2, boolean escape) {
+			boolean sprint, boolean turnLeft2, boolean turnRight2, boolean escape, boolean superSprint) {
 		double jumpHeight = 0.5;
 		double crouchHeight = 0.3;
 		double walkSpeed = 0.5;
@@ -70,6 +70,13 @@ public class Controller {
 
 		if (sprint) {
 			walkSpeed = 0.8;
+			sprinting = true;
+		} else {
+			sprinting = false;
+		}
+		
+		if(superSprint) {
+			walkSpeed = 3.0;
 			sprinting = true;
 		} else {
 			sprinting = false;
