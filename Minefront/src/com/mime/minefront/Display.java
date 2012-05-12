@@ -218,6 +218,10 @@ public class Display extends Canvas implements Runnable {
 			height = 768;
 
 		}
+		if (resSelection == 7) {
+			width = 1920;
+			height = 1080;
+		}
 	}
 
 

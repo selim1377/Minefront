@@ -56,6 +56,7 @@ public class Options extends JFrame implements ActionListener {
 		res.add("960, 540 (Widescreen)");
 		res.add("1024, 576 (Widescreen)");
 		res.add("1366, 768 (Widescreen)");
+		res.add("1920, 1080 (Widescreen)");
 		res.select(Config.loadConfig("res/settings/config.xml", "resSelection"));
 		window.add(res);
 		window.add(resLabel);

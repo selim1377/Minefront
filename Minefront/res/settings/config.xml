@@ -3,5 +3,5 @@
 <properties>
 <comment>Options</comment>
 <entry key="fullScreenSelection">1</entry>
-<entry key="resSelection">0</entry>
+<entry key="resSelection">1</entry>
 </properties>

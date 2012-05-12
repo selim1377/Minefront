@@ -16,7 +16,7 @@ public class Controller {
 			boolean sprint, boolean turnLeft2, boolean turnRight2, boolean escape, boolean superSprint) {
 		double jumpHeight = 0.5;
 		double crouchHeight = 0.3;
-		double walkSpeed = 0.5;
+		double walkSpeed = 0.7;
 		double turnSpeed = 0.0005 * Display.mouseSpeed;
 		double turnSpeed2 = 0.015;
 		double xMove = 0;
@@ -69,14 +69,14 @@ public class Controller {
 		}
 
 		if (sprint) {
-			walkSpeed = 0.8;
+			walkSpeed *= 2.5;
 			sprinting = true;
 		} else {
 			sprinting = false;
 		}
 		
 		if(superSprint) {
-			walkSpeed = 3.0;
+			walkSpeed = 5.0;
 			sprinting = true;
 		} else {
 			sprinting = false;
