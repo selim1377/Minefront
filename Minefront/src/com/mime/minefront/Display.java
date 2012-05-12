@@ -112,7 +112,7 @@ public class Display extends Canvas implements Runnable {
 			long currentTime = System.nanoTime();
 			long passedTime = currentTime - previousTime;
 			previousTime = currentTime;
-			unprocessedSeconds = passedTime / 1000000000.0;
+			unprocessedSeconds += passedTime / 1000000000.0;
 			
 			while (unprocessedSeconds > secondsPerTick) {
 				tick();
